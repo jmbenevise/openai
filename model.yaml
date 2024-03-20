@@ -16,6 +16,12 @@ stopwords:
 - "<|im_end|>"
 - "<|im_start|>"
 template:
-  chat: laser-chat
-  chat_message: laser-chat-block
-  completion: laser-completion
+  chat: &template |
+    {{.Input}}
+    <|im_start|>assistant
+  chat_message: &template |
+    <|im_start|>{{if eq .RoleName "assistant"}}assistant{{else if eq .RoleName "system"}}system{{else if eq .RoleName "user"}}user{{end}}
+    {{if .Content}}{{.Content}}{{end}}
+    <|im_end|>
+  completion: &template |
+    {{.Input}}\r\n<|im_start|>assistant
