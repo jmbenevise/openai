@@ -1,0 +1,21 @@
+context_size: 4096
+threads: 8
+f16: true
+gpu_layers: 36
+low_vram: false
+mmap: false
+mmlock: false
+name: LaserDolphinMix14bQ6
+parameters:
+  model: huggingface://TheBloke/laser-dolphin-mixtral-2x7b-dpo-GGUF/laser-dolphin-mixtral-2x7b-dpo.Q6_K.gguf
+  temperature: 0.2
+stopwords:
+- "user|"
+- "assistant|"
+- "system|"
+- "<|im_end|>"
+- "<|im_start|>"
+template:
+  chat: laser-chat
+  chat_message: laser-chat-block
+  completion: laser-completion
