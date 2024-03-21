@@ -1,7 +1,7 @@
 context_size: 4096
 threads: 8
 f16: true
-#gpu_layers: 36
+gpu_layers: 36
 low_vram: false
 mmap: false
 mmlock: false
