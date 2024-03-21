@@ -5,9 +5,9 @@ f16: true
 low_vram: false
 mmap: false
 mmlock: false
-name: LaserDolphinMix14bQ6
+name: LaserDolphinMix14bQ4
 parameters:
-  model: laser-dolphin-mixtral-2x7b-dpo.Q6_K.gguf
+  model: laser-dolphin-mixtral-2x7b-dpo.Q4_K_M.gguf
   temperature: 0.2
 stopwords:
 - "user|"
