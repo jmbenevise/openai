@@ -5,9 +5,9 @@ gpu_layers: 36
 low_vram: false
 mmap: false
 mmlock: false
-name: LaserDolphinMix14bQ4
+name: HA
 parameters:
-  model: laser-dolphin-mixtral-2x7b-dpo.Q4_K_M.gguf
+  model: Home-3B-v3.f16.gguf
   temperature: 0.2
 stopwords:
 - "user|"
